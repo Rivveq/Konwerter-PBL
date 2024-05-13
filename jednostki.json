@@ -1,0 +1,22 @@
+{
+    "dlugosc": {
+        "kilometry": 0.001,
+        "metry": 1,
+        "centymetry": 100,
+        "stopy": 3.28084,
+        "cale": 39.3701
+    },
+    "masa": {
+        "gramy": 1,
+        "kilogramy": 0.001,
+        "funty": 0.00220462,
+        "uncje": 0.035274
+    },
+    "czas": {
+        "sekundy": 1,
+        "minuty": 0.0166667,
+        "godziny": 0.000277778,
+        "dni": 1.15741e-5
+    }
+  }
+  

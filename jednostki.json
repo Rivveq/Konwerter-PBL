@@ -82,11 +82,13 @@
         "kwarta": 1
     },
     "temperatura": {
-        "celcjusz": 1,
-        "farenheit": 1,
-        "kelwin": 1,
-        "newton": 1,
-        "rankine": 1
+        "stopien celcjusza": 1,
+        "stopien fahrenheita": 33.8,
+        "kelwin": 274.15,
+        "stopien newtona": 0.33,
+        "stopien rankinea": 493.47,
+        "stopien romera": 8.025,
+        "temperatura plancka": 1.9350162057166e-30
     },
     "ciśnienie": {
         "paskal": 1,

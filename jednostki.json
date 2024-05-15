@@ -104,17 +104,17 @@
         "mach": 1
     },
     "pojemność pamięci":{
-        "bit": 1,
+        "bit": 0.125,
         "bajt": 1,
-        "kibibajt": 1,
-        "mebibajt": 1,
-        "gibibajt": 1,
-        "tebibajt": 1,
-        "pebibajt": 1,
-        "kilobajt": 1,
-        "megabajt": 1,
-        "gigabajt": 1,
-        "terabajt": 1,
-        "petabajt": 1
+        "kibibajt": 0.0009765625,
+        "mebibajt": 9.5367431640625e-7,
+        "gibibajt": 9.313225746154785e-10,
+        "tebibajt": 9.094947017729282e-13,
+        "pebibajt": 8.881784197001252e-16,
+        "kilobajt": 0.001,
+        "megabajt": 0.000001,
+        "gigabajt": 0.000000001,
+        "terabajt": 0.000000000001,
+        "petabajt": 0.000000000000001
     }
   }

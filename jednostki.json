@@ -96,12 +96,12 @@
         "milimetr słupa rtęci": 1
     },
     "prędkość": {
-        "km/h": 1,
+        "km/h": 3.6,
         "m/s": 1,
-        "mila/h": 1,
-        "węzeł": 1,
-        "prędkość światła": 1,
-        "mach": 1
+        "mph": 2.24,
+        "węzeł": 1.9426038273181,
+        "prędkość światła": 3.3356409519815e-9,
+        "mach": 0.002938669957977
     },
     "pojemność pamięci":{
         "bit": 0.125,

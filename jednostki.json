@@ -65,19 +65,18 @@
         "staja": 6.6666666667e-5
     },
     "objętość": {
-        "kilometr^3": 1,
+        "kilometr^3": 0.000000001,
         "metr^3": 1,
-        "centymetr^3": 1,
-        "litr": 1,
-        "mililitr": 1,
-        "kubik": 1,
-        "baryłka ropy": 1,
-        "buszel": 1,
-        "galon": 1,
-        "szklanka": 1,
-        "szefel": 1,
-        "garniec": 1,
-        "kwarta": 1
+        "centymetr^3": 1000000,
+        "litr": 1000,
+        "mililitr": 1000000,
+        "baryłka ropy": 6.2898107704321,
+        "buszel": 27.496156037386,
+        "galon": 219.96924829909,
+        "szklanka": 5000,
+        "szefel": 15.605493133583021223470661672909,
+        "garniec": 140.44943820224719101123595505618,
+        "kwarta": 561.79775280898876404494382022472
     },
     "temperatura": {
         "stopien celcjusza": 1,

@@ -80,39 +80,44 @@
         "kwarta": 1
     },
     "temperatura": {
-        "celcjusz": 1,
-        "farenheit": 1,
-        "kelwin": 1,
-        "newton": 1,
-        "rankine": 1
+        "stopien celcjusza": 1,
+        "stopien fahrenheita": 33.8,
+        "kelwin": 274.15,
+        "stopien newtona": 0.33,
+        "stopien rankinea": 493.47,
+        "stopien romera": 8.025,
+        "temperatura plancka": 1.9350162057166e-30
     },
     "ciśnienie": {
         "paskal": 1,
-        "bar": 1,
-        "atmosfera techniczna": 1,
-        "milimetr słupa wody": 1,
-        "milimetr słupa rtęci": 1
+        "hektopascal": 0.01,
+        "bar": 1.0e-5,
+        "atmosfera fizyczna": 9.8692326671601e-6,
+        "atmosfera techniczna": 1.0197162129779e-5,
+        "milimetr słupa wody": 0.10197442889221,
+        "milimetr słupa rtęci": 0.0075006157584566,
+        "torr": 0.0075006168282261
     },
     "prędkość": {
-        "km/h": 1,
+        "km/h": 3.6,
         "m/s": 1,
-        "mila/h": 1,
-        "węzeł": 1,
-        "prędkość światła": 1,
-        "mach": 1
+        "mph": 2.24,
+        "węzeł": 1.9426038273181,
+        "prędkość światła": 3.3356409519815e-9,
+        "mach": 0.002938669957977
     },
     "pojemność pamięci":{
-        "bit": 1,
+        "bit": 0.125,
         "bajt": 1,
-        "kibibajt": 1,
-        "mebibajt": 1,
-        "gibibajt": 1,
-        "tebibajt": 1,
-        "pebibajt": 1,
-        "kilobajt": 1,
-        "megabajt": 1,
-        "gigabajt": 1,
-        "terabajt": 1,
-        "petabajt": 1
+        "kibibajt": 0.0009765625,
+        "mebibajt": 9.5367431640625e-7,
+        "gibibajt": 9.313225746154785e-10,
+        "tebibajt": 9.094947017729282e-13,
+        "pebibajt": 8.881784197001252e-16,
+        "kilobajt": 0.001,
+        "megabajt": 0.000001,
+        "gigabajt": 0.000000001,
+        "terabajt": 0.000000000001,
+        "petabajt": 0.000000000000001
     }
   }

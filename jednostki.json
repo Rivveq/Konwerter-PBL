@@ -92,10 +92,13 @@
     },
     "ciśnienie": {
         "paskal": 1,
-        "bar": 1,
-        "atmosfera techniczna": 1,
-        "milimetr słupa wody": 1,
-        "milimetr słupa rtęci": 1
+        "hektopascal": 0.01,
+        "bar": 1.0e-5,
+        "atmosfera fizyczna": 9.8692326671601e-6,
+        "atmosfera techniczna": 1.0197162129779e-5,
+        "milimetr słupa wody": 0.10197442889221,
+        "milimetr słupa rtęci": 0.0075006157584566,
+        "torr": 0.0075006168282261
     },
     "prędkość": {
         "km/h": 3.6,

@@ -17,7 +17,8 @@ class App(customtki.CTk):
         # Konfiguracja siatki
         self.grid_columnconfigure((1, 2, 3, 4, 5), weight=1)
         self.grid_rowconfigure(0, weight=4)
-        self.grid_rowconfigure((1, 2, 3), weight=2)
+        self.grid_rowconfigure(1, weight=1)
+        self.grid_rowconfigure((2, 3), weight=2)
 
         # Napis tytułowy
         self.label = customtki.CTkLabel(self, text="Konwerter Jednostek", font=customtki.CTkFont(size=30, weight="bold"))

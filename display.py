@@ -26,20 +26,37 @@ class App(customtki.CTk):
         # Sidebar
         self.sidebar_frame = customtki.CTkFrame(self, width=180, corner_radius=0)
         self.sidebar_frame.grid(row=0, column=5, rowspan=4, sticky="nsew")
-        self.sidebar_frame.grid_rowconfigure(4, weight=2)
+        self.sidebar_frame.grid_rowconfigure((1, 2, 3, 4, 5, 6, 7, 8, 9), weight=2)
+        self.sidebar_frame.grid_columnconfigure(1, weight=2)
 
-        # Stworzenie tablicy w sidebarze
-        self.tabview = customtki.CTkTabview(self.sidebar_frame, width=180)
-        self.tabview.grid(row=1, column=5, rowspan=3, padx=10, pady=10)
-        self.tabview.add("Długość")
-        self.tabview.add("Masa")
-        self.tabview.add("Czas")
-        self.tabview.add("Pole powierzchnii")
-        self.tabview.add("Objętość")
-        self.tabview.add("Temperatura")
-        self.tabview.add("Ciśnienie")
-        self.tabview.add("Prędkość")
-        self.tabview.add("Pamięć")
+        # Przyciski na sidebarze
+        self.sbutton1 = customtki.CTkButton(self.sidebar_frame, height=40, width=120, text="Długość")
+        self.sbutton1.grid(row=1, columnspan=2)
+        
+        self.sbutton1 = customtki.CTkButton(self.sidebar_frame, height=40, width=120, text="Masa")
+        self.sbutton1.grid(row=2, columnspan=2)
+        
+        self.sbutton1 = customtki.CTkButton(self.sidebar_frame, height=40, width=120, text="Czas")
+        self.sbutton1.grid(row=3, columnspan=2)
+        
+        self.sbutton1 = customtki.CTkButton(self.sidebar_frame, height=40, width=120, text="Pole Powierzchni")
+        self.sbutton1.grid(row=4, columnspan=2)
+        
+        self.sbutton1 = customtki.CTkButton(self.sidebar_frame, height=40, width=120, text="Objętość")
+        self.sbutton1.grid(row=5, columnspan=2)
+        
+        self.sbutton1 = customtki.CTkButton(self.sidebar_frame, height=40, width=120, text="Temperatura")
+        self.sbutton1.grid(row=6, columnspan=2)
+        
+        self.sbutton1 = customtki.CTkButton(self.sidebar_frame, height=40, width=120, text="Ciśnienie")
+        self.sbutton1.grid(row=7, columnspan=2)
+        
+        self.sbutton1 = customtki.CTkButton(self.sidebar_frame, height=40, width=120, text="Prędkość")
+        self.sbutton1.grid(row=8, columnspan=2)
+        
+        self.sbutton1 = customtki.CTkButton(self.sidebar_frame, height=40, width=120, text="Pojemność Pamięci")
+        self.sbutton1.grid(row=9, columnspan=2)
+
 
         # Podpisy wejscia i wyjscia
         self.labelin = customtki.CTkLabel(self, text="Wejście", font=customtki.CTkFont(size=20, weight="bold"))
@@ -60,15 +77,15 @@ class App(customtki.CTk):
         self.output = customtki.CTkLabel(self, height=55, width=220, text="Placeholder", font=customtki.CTkFont(size=20), fg_color="gray29", corner_radius=8)
         self.output.grid(row=2, column=3, padx=5, pady=0)
 
-        # # Lista jednostek wejścia
-        # self.listain = customtki.CTkComboBox(self, width=150,
-        #                                      values=["ocpja1", "opcja2", "opcja3"])
-        # self.listain.grid(row=2, column=1, padx=0, pady=10)
+        # Lista jednostek wejścia
+        self.listain = customtki.CTkComboBox(self, width=150,
+                                             values=["ocpja1", "opcja2", "opcja3"])
+        self.listain.grid(row=3, column=1, padx=0, pady=10)
 
-        # # Lista jednostek wyjścia
-        # self.listain = customtki.CTkComboBox(self, width=150,
-        #                                      values=["ocpja1", "opcja2", "opcja3"])
-        # self.listain.grid(row=2, column=5, padx=0, pady=10)
+        # Lista jednostek wyjścia
+        self.listain = customtki.CTkComboBox(self, width=150,
+                                             values=["ocpja1", "opcja2", "opcja3"])
+        self.listain.grid(row=3, column=3, padx=0, pady=10)
         
         # Przycisk do konwersjii
         self.button = customtki.CTkButton(self, height=40, width=180, text="Konwertuj")

@@ -61,6 +61,7 @@ def conv_planck(output, quantity: float):
         case 'romer': return (quantity * 1.416808e32 - 273.15) * 21/40 + 7.5
         case 'celsjusz': return quantity * 1.416808e32 - 273.15
 
+# Glowna funkcja przywolujaca pozostale podfunkcje
 def convert_temperature(input, output, quantity: float):
     match input:
         case 'celsjusz': return conv_celsjusz(output, quantity)

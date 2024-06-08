@@ -1,6 +1,5 @@
 import customtkinter as customtki
-import logika
-import temperatura
+import logika, temperatura, waluty
 
 # Logika odpowiedzialna za tworzenie okna aplikacji
 
@@ -29,7 +28,7 @@ class App(customtki.CTk):
         # Sidebar
         self.sidebar_frame = customtki.CTkFrame(self, width=180, corner_radius=0)
         self.sidebar_frame.grid(row=0, column=5, rowspan=4, sticky="nsew")
-        self.sidebar_frame.grid_rowconfigure((1, 2, 3, 4, 5, 6, 7, 8, 9), weight=2)
+        self.sidebar_frame.grid_rowconfigure((1, 2, 3, 4, 5, 6, 7, 8, 9, 10), weight=2)
         self.sidebar_frame.grid_columnconfigure(1, weight=2)
 
         # Przyciski na sidebarze
@@ -59,6 +58,9 @@ class App(customtki.CTk):
         
         self.sbutton1 = customtki.CTkButton(self.sidebar_frame, height=40, width=120, text="Pojemność Pamięci", command=lambda: self.change_item_list("pojemność pamięci"))
         self.sbutton1.grid(row=9, columnspan=2)
+
+        self.sbutton1 = customtki.CTkButton(self.sidebar_frame, height=40, width=120, text="Waluty", command=lambda: self.change_item_list("waluty"))
+        self.sbutton1.grid(row=10, columnspan=2)
 
 
         # Podpisy wejscia i wyjscia
@@ -109,6 +111,11 @@ class App(customtki.CTk):
         entry_value = self.entry.get()
         if self.category == "temperatura":
             converted_value = temperatura.convert_temperature(self.lista_in.get(), self.lista_out.get(), float(entry_value))
+        
+        elif self.category == "waluty":
+            converted_value = round(waluty.convert_currency(self.lista_in.get(), self.lista_out.get(), float(entry_value)), 2) # Wartość zaokrąglona do dwoch miejsc po przecinku
+        
         else:
             converted_value = logika.convert(self.category, self.lista_in.get(), self.lista_out.get(), float(entry_value))
+        
         self.output.configure(text=converted_value)

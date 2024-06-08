@@ -79,12 +79,12 @@
         "kwarta": 561.79775280898876404494382022472
     },
     "temperatura": {
-        "stopien celcjusza": 1,
-        "stopien fahrenheita": 33.8,
-        "kelwin": 274.15,
-        "stopien newtona": 0.33,
-        "stopien rankinea": 493.47,
-        "stopien romera": 8.025,
+        "celsjusz": 1,
+        "fahrenheit": 33.8,
+        "kelvin": 274.15,
+        "newton": 0.33,
+        "renkine": 493.47,
+        "romer": 8.025,
         "temperatura plancka": 1.9350162057166e-30
     },
     "ciśnienie": {
@@ -118,5 +118,37 @@
         "gigabajt": 0.000000001,
         "terabajt": 0.000000000001,
         "petabajt": 0.000000000000001
+    },
+    "waluty":{
+        "Amerykański Dolar": "USD",
+        "Japoński Yen": "JPY",
+        "Bułgarski lew": "BGN",
+        "Czeska korona": "CZK",
+        "Duńska korona": "DKK",
+        "Brytyjski funt": "GBP",
+        "Węgierski forint": "HUF",
+        "Polski złoty": "PLN",
+        "Rumuński lej": "RON",
+        "Szwedzka korona": "SEK",
+        "Szwajcarski frank": "CHF",
+        "Islandzka korona": "ISK",
+        "Norweska korona": "NOK",
+        "Turecka lira": "TRY",
+        "Australijski dolar": "AUD",
+        "Brazilijski real": "BRL",
+        "Kanadyjski dolar": "CAD",
+        "Chiński juan": "CNY",
+        "Hongkong dolar": "HKD",
+        "Indonezyjskie rupie": "IDR",
+        "Izraelskie szekele": "ILS",
+        "Indyjskie rupie": "INR",
+        "Południowo koreański won": "KRW",
+        "Meksykańskie peso": "MXN",
+        "Malezyjski ringgit": "MYR",
+        "Nowozelandzki dolar": "NZD",
+        "Filipińskie peso": "PHP",
+        "Singapurski dolar": "SGD",
+        "Tajlandzki bat": "THB",
+        "Południowoafrykański rand": "ZAR"
     }
   }

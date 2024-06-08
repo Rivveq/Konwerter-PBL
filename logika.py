@@ -15,8 +15,8 @@ def get_convert_factor(category, input, output):
     return output_factor/input_factor
 
 # Funkcja do konwertowania pary jednostek
-def convert(category, input, output, quantity):
-    return float(quantity)*get_convert_factor(category, input, output)
+def convert(category, input, output, quantity: float):
+    return quantity * get_convert_factor(category, input, output)
 
 # Funkcja zwracająca listę jednostek z danej kategorii
 def fetch_items(category):

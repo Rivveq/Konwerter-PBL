@@ -1,5 +1,6 @@
 import customtkinter as customtki
 import logika
+import temperatura
 
 # Logika odpowiedzialna za tworzenie okna aplikacji
 
@@ -103,7 +104,11 @@ class App(customtki.CTk):
         self.lista_out.set(item_list[0])
         self.category = category
 
+    # Funkcja zajmująca sie konwersją jednostek i wyświetlaniem wyniku w polu output
     def conversion_logic(self):
         entry_value = self.entry.get()
-        converted_value = logika.convert(self.category, self.lista_in.get(), self.lista_out.get(), entry_value)
+        if self.category == "temperatura":
+            converted_value = temperatura.convert_temperature(self.lista_in.get(), self.lista_out.get(), float(entry_value))
+        else:
+            converted_value = logika.convert(self.category, self.lista_in.get(), self.lista_out.get(), float(entry_value))
         self.output.configure(text=converted_value)

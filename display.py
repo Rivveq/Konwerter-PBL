@@ -97,8 +97,12 @@ class App(customtki.CTk):
         self.button = customtki.CTkButton(self, height=40, width=180, text="Konwertuj", command=lambda: self.conversion_logic())
         self.button.grid(row=3, column=1, columnspan=3)
     
-    # Funkcja do ktorej odwołują się przyciski, służy do zmiany listy przedmiotow uzywanej w drop down listach wyboru jednostek
     def change_item_list(self, category):
+        """This function is responsible for changing the combo boxes according to the selected category via a button press in the app gui.
+
+        Args:
+            - category: Item category in the json file (for example masa, czas).
+        """
         item_list = logika.fetch_items(category)
         self.lista_in.configure(values= item_list)
         self.lista_out.configure(values= item_list)
@@ -106,8 +110,8 @@ class App(customtki.CTk):
         self.lista_out.set(item_list[1])
         self.category = category
 
-    # Funkcja zajmująca sie konwersją jednostek i wyświetlaniem wyniku w polu output
     def conversion_logic(self):
+        """This function handles the logic associated with the conversion of units and updates the output text box to display the converted value."""
         entry_value = self.entry.get()
         if self.category == "temperatura":
             converted_value = temperatura.convert_temperature(self.lista_in.get(), self.lista_out.get(), float(entry_value))

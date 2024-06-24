@@ -103,7 +103,7 @@ class App(customtki.CTk):
         self.lista_in.configure(values= item_list)
         self.lista_out.configure(values= item_list)
         self.lista_in.set(item_list[0])
-        self.lista_out.set(item_list[0])
+        self.lista_out.set(item_list[1])
         self.category = category
 
     # Funkcja zajmująca sie konwersją jednostek i wyświetlaniem wyniku w polu output

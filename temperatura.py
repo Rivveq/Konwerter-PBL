@@ -1,4 +1,14 @@
 def conv_celsjusz(output, quantity: float):
+    """This function handles the temperature conversion from celsius.
+    
+    Args:
+        - output: temperature unit to convert to.
+        - quantity (float): quantity to be converted.
+    
+    Returns:
+        float: converted value.
+    """
+
     match output:
         case 'fahrenheit': return (quantity * 9/5) + 32
         case 'kelvin': return quantity + 273.15
@@ -8,6 +18,16 @@ def conv_celsjusz(output, quantity: float):
         case 'temperatura plancka': return (quantity + 273.15) / 1.416808e32,
 
 def conv_fahrenheit(output, quantity: float):
+    """This function handles the temperature conversion from fahrenheit.
+    
+    Args:
+        - output: temperature unit to convert to.
+        - quantity (float): quantity to be converted.
+    
+    Returns:
+        float: converted value.
+    """
+
     match output:
         case 'calsjusz': return (quantity - 32) * 5/9
         case 'kelvin': return (quantity - 32) * 5/9 + 273.15
@@ -17,6 +37,16 @@ def conv_fahrenheit(output, quantity: float):
         case 'temperatura plancka': return ((quantity - 32) * 5/9 + 273.15) / 1.416808e32
 
 def conv_kelvin(output, quantity: float):
+    """This function handles the temperature conversion from kelvin.
+    
+    Args:
+        - output: temperature unit to convert to.
+        - quantity (float): quantity to be converted.
+    
+    Returns:
+        ffloat: converted value.
+    """
+
     match output:
         case 'celsjusz': return quantity - 273.15
         case 'fahrenheit': return (quantity - 273.15) * 9/5 + 32
@@ -26,6 +56,16 @@ def conv_kelvin(output, quantity: float):
         case 'temperatura plancka': return quantity / 1.416808e32
 
 def conv_newton(output, quantity: float):
+    """This function handles the temperature conversion from newton.
+    
+    Args:
+        - output: temperature unit to convert to.
+        - quantity (float): quantity to be converted.
+    
+    Returns:
+        float: converted value.
+    """
+
     match output:
         case 'celsjusz': return quantity * 100/33
         case 'fahrenheit': return quantity * 60/11 + 32
@@ -35,6 +75,16 @@ def conv_newton(output, quantity: float):
         case 'temperatura plancka': return (quantity * 100/33 + 273.15) / 1.416808e32
 
 def conv_rankine(output, quantity: float):
+    """This function handles the temperature conversion from rankine.
+    
+    Args:
+        - output: temperature unit to convert to.
+        - quantity (float): quantity to be converted.
+    
+    Returns:
+        float: converted value.
+    """
+
     match output:
         case 'celsjusz': return (quantity - 491.67) * 5/9
         case 'fahrenheit': return quantity - 459.67
@@ -44,6 +94,16 @@ def conv_rankine(output, quantity: float):
         case 'temperatura plancka': return (quantity * 5/9) / 1.416808e32
 
 def conv_romer(output, quantity: float):
+    """This function handles the temperature conversion from romer.
+    
+    Args:
+        - output: temperature unit to convert to.
+        - quantity (float): quantity to be converted.
+    
+    Returns:
+        float: converted value.
+    """
+
     match output:
         case 'celsjusz': return (quantity - 7.5) * 40/21
         case 'fahrenheit': return (quantity - 7.5) * 24/7 + 32
@@ -53,6 +113,16 @@ def conv_romer(output, quantity: float):
         case 'temperatura plancka': return ((quantity - 7.5) * 40/21 + 273.15) / 1.416808e32
 
 def conv_planck(output, quantity: float):
+    """This function handles the temperature conversion from planck.
+    
+    Args:
+        - output: temperature unit to convert to.
+        - quantity (float): quantity to be converted.
+    
+    Returns:
+        float: converted value.
+    """
+
     match output:
         case 'fahrenheit': return (quantity * 1.416808e32 - 273.15) * 9/5 + 32
         case 'kelvin': return quantity * 1.416808e32
@@ -61,8 +131,18 @@ def conv_planck(output, quantity: float):
         case 'romer': return (quantity * 1.416808e32 - 273.15) * 21/40 + 7.5
         case 'celsjusz': return quantity * 1.416808e32 - 273.15
 
-# Glowna funkcja przywolujaca pozostale podfunkcje
 def convert_temperature(input, output, quantity: float):
+    """This function handles all of the temperature conversion calls referencing other functions associated with the specific temp units.
+    
+    Args:
+        - input: temperature unit to convert from.
+        - output: temperature unit to convert to.
+        - quantity (float): quantity to be converted.
+    
+    Returns:
+        float: converted value.
+    """
+
     match input:
         case 'celsjusz': return conv_celsjusz(output, quantity)
         case 'fahrenheit': return conv_fahrenheit(output, quantity)

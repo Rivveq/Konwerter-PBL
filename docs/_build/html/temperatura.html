@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>temperatura module &mdash; Konwerter PBL 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=8d563738"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="waluty module" href="waluty.html" />
+    <link rel="prev" title="logika module" href="logika.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Konwerter PBL
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Konwerter-PBL</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="display.html">display module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="konwerter.html">konwerter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logika.html">logika module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">temperatura module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#temperatura.conv_celsjusz"><code class="docutils literal notranslate"><span class="pre">conv_celsjusz()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#temperatura.conv_fahrenheit"><code class="docutils literal notranslate"><span class="pre">conv_fahrenheit()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#temperatura.conv_kelvin"><code class="docutils literal notranslate"><span class="pre">conv_kelvin()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#temperatura.conv_newton"><code class="docutils literal notranslate"><span class="pre">conv_newton()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#temperatura.conv_planck"><code class="docutils literal notranslate"><span class="pre">conv_planck()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#temperatura.conv_rankine"><code class="docutils literal notranslate"><span class="pre">conv_rankine()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#temperatura.conv_romer"><code class="docutils literal notranslate"><span class="pre">conv_romer()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#temperatura.convert_temperature"><code class="docutils literal notranslate"><span class="pre">convert_temperature()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="waluty.html">waluty module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Konwerter PBL</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">Konwerter-PBL</a></li>
+      <li class="breadcrumb-item active">temperatura module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/temperatura.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-temperatura">
+<span id="temperatura-module"></span><h1>temperatura module<a class="headerlink" href="#module-temperatura" title="Link to this heading"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="temperatura.conv_celsjusz">
+<span class="sig-prename descclassname"><span class="pre">temperatura.</span></span><span class="sig-name descname"><span class="pre">conv_celsjusz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/temperatura.html#conv_celsjusz"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#temperatura.conv_celsjusz" title="Link to this definition"></a></dt>
+<dd><p>This function handles the temperature conversion from celsius.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><ul class="simple">
+<li><p>output: temperature unit to convert to.</p></li>
+<li><p>quantity (float): quantity to be converted.</p></li>
+</ul>
+</dd>
+<dt>Returns:</dt><dd><p>float: converted value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="temperatura.conv_fahrenheit">
+<span class="sig-prename descclassname"><span class="pre">temperatura.</span></span><span class="sig-name descname"><span class="pre">conv_fahrenheit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/temperatura.html#conv_fahrenheit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#temperatura.conv_fahrenheit" title="Link to this definition"></a></dt>
+<dd><p>This function handles the temperature conversion from fahrenheit.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><ul class="simple">
+<li><p>output: temperature unit to convert to.</p></li>
+<li><p>quantity (float): quantity to be converted.</p></li>
+</ul>
+</dd>
+<dt>Returns:</dt><dd><p>float: converted value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="temperatura.conv_kelvin">
+<span class="sig-prename descclassname"><span class="pre">temperatura.</span></span><span class="sig-name descname"><span class="pre">conv_kelvin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/temperatura.html#conv_kelvin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#temperatura.conv_kelvin" title="Link to this definition"></a></dt>
+<dd><p>This function handles the temperature conversion from kelvin.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><ul class="simple">
+<li><p>output: temperature unit to convert to.</p></li>
+<li><p>quantity (float): quantity to be converted.</p></li>
+</ul>
+</dd>
+<dt>Returns:</dt><dd><p>ffloat: converted value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="temperatura.conv_newton">
+<span class="sig-prename descclassname"><span class="pre">temperatura.</span></span><span class="sig-name descname"><span class="pre">conv_newton</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/temperatura.html#conv_newton"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#temperatura.conv_newton" title="Link to this definition"></a></dt>
+<dd><p>This function handles the temperature conversion from newton.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><ul class="simple">
+<li><p>output: temperature unit to convert to.</p></li>
+<li><p>quantity (float): quantity to be converted.</p></li>
+</ul>
+</dd>
+<dt>Returns:</dt><dd><p>float: converted value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="temperatura.conv_planck">
+<span class="sig-prename descclassname"><span class="pre">temperatura.</span></span><span class="sig-name descname"><span class="pre">conv_planck</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/temperatura.html#conv_planck"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#temperatura.conv_planck" title="Link to this definition"></a></dt>
+<dd><p>This function handles the temperature conversion from planck.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><ul class="simple">
+<li><p>output: temperature unit to convert to.</p></li>
+<li><p>quantity (float): quantity to be converted.</p></li>
+</ul>
+</dd>
+<dt>Returns:</dt><dd><p>float: converted value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="temperatura.conv_rankine">
+<span class="sig-prename descclassname"><span class="pre">temperatura.</span></span><span class="sig-name descname"><span class="pre">conv_rankine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/temperatura.html#conv_rankine"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#temperatura.conv_rankine" title="Link to this definition"></a></dt>
+<dd><p>This function handles the temperature conversion from rankine.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><ul class="simple">
+<li><p>output: temperature unit to convert to.</p></li>
+<li><p>quantity (float): quantity to be converted.</p></li>
+</ul>
+</dd>
+<dt>Returns:</dt><dd><p>float: converted value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="temperatura.conv_romer">
+<span class="sig-prename descclassname"><span class="pre">temperatura.</span></span><span class="sig-name descname"><span class="pre">conv_romer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/temperatura.html#conv_romer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#temperatura.conv_romer" title="Link to this definition"></a></dt>
+<dd><p>This function handles the temperature conversion from romer.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><ul class="simple">
+<li><p>output: temperature unit to convert to.</p></li>
+<li><p>quantity (float): quantity to be converted.</p></li>
+</ul>
+</dd>
+<dt>Returns:</dt><dd><p>float: converted value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="temperatura.convert_temperature">
+<span class="sig-prename descclassname"><span class="pre">temperatura.</span></span><span class="sig-name descname"><span class="pre">convert_temperature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/temperatura.html#convert_temperature"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#temperatura.convert_temperature" title="Link to this definition"></a></dt>
+<dd><p>This function handles all of the temperature conversion calls referencing other functions associated with the specific temp units.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><ul class="simple">
+<li><p>input: temperature unit to convert from.</p></li>
+<li><p>output: temperature unit to convert to.</p></li>
+<li><p>quantity (float): quantity to be converted.</p></li>
+</ul>
+</dd>
+<dt>Returns:</dt><dd><p>float: converted value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="logika.html" class="btn btn-neutral float-left" title="logika module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="waluty.html" class="btn btn-neutral float-right" title="waluty module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Oskar Zagorski.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

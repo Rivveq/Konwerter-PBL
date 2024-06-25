@@ -1,7 +1,7 @@
 import customtkinter as customtki
 import logika, temperatura, waluty
 
-# Logika odpowiedzialna za tworzenie okna aplikacji
+# Gui logic
 
 class App(customtki.CTk):
 
@@ -11,17 +11,17 @@ class App(customtki.CTk):
     def __init__(self):
         super().__init__()
 
-        # Konfiguracja okna
+        # Window config
         self.title("Konwerter jednostek")
         self.geometry(f"{1100}x{580}")
 
-        # Konfiguracja siatki
+        # Grid config
         self.grid_columnconfigure((1, 2, 3, 4, 5), weight=1)
         self.grid_rowconfigure(0, weight=4)
         self.grid_rowconfigure(1, weight=1)
         self.grid_rowconfigure((2, 3), weight=2)
 
-        # Napis tytułowy
+        # Main header
         self.label = customtki.CTkLabel(self, text="Konwerter Jednostek", font=customtki.CTkFont(size=30, weight="bold"))
         self.label.grid(row=0, column=1, columnspan=3, padx=20, pady=(20, 10))
 
@@ -31,7 +31,7 @@ class App(customtki.CTk):
         self.sidebar_frame.grid_rowconfigure((1, 2, 3, 4, 5, 6, 7, 8, 9, 10), weight=2)
         self.sidebar_frame.grid_columnconfigure(1, weight=2)
 
-        # Przyciski na sidebarze
+        # Sidebar buttons
         self.sbutton1 = customtki.CTkButton(self.sidebar_frame, height=40, width=120, text="Długość", command=lambda: self.change_item_list("dlugosc"))
         self.sbutton1.grid(row=1, columnspan=2)
         
@@ -63,37 +63,37 @@ class App(customtki.CTk):
         self.sbutton1.grid(row=10, columnspan=2)
 
 
-        # Podpisy wejscia i wyjscia
+        # Input/Output labels
         self.labelin = customtki.CTkLabel(self, text="Wejście", font=customtki.CTkFont(size=20, weight="bold"))
         self.labelin.grid(row=1, column=1, padx=20, pady=(10, 0))
 
         self.labelout = customtki.CTkLabel(self, text="Wyjście", font=customtki.CTkFont(size=20, weight="bold"))
         self.labelout.grid(row=1, column=3, padx=20, pady=(10, 0))
 
-        # Znak "=" na środku
+        # "=" symbol
         self.rowna = customtki.CTkLabel(self, text="=", font=customtki.CTkFont(size=50, weight="bold"))
         self.rowna.grid(row=2, column=2, padx=10, pady=0)
 
-        # Pole wejściowe
+        # Input box
         self.entry = customtki.CTkEntry(self, height=55, width=220, placeholder_text="Ilość", fg_color="gray29", corner_radius=8, font=customtki.CTkFont(size=20), justify="center")
         self.entry.grid(row=2, column=1, padx=5, pady=0)
 
-        # Pole wyjściowe
+        # Output box
         self.output = customtki.CTkLabel(self, height=55, width=220, text="Bagno", font=customtki.CTkFont(size=20), fg_color="gray29", corner_radius=8)
         self.output.grid(row=2, column=3, padx=5, pady=0)
 
-        # Podstawowa wartości dla listy jednostek
+        # Default values for a category
         self.category = "dlugosc"
         self.item_list = logika.fetch_items(self.category)
 
-        # Listy jednostek wejścia i wyjścia
+        # Input/output lists
         self.lista_in = customtki.CTkComboBox(self, width=150, values= self.item_list)
         self.lista_in.grid(row=3, column=1, padx=0, pady=10)
 
         self.lista_out = customtki.CTkComboBox(self, width=150, values= self.item_list)
         self.lista_out.grid(row=3, column=3, padx=0, pady=10)
         
-        # Przycisk do konwersjii
+        # Convert button
         self.button = customtki.CTkButton(self, height=40, width=180, text="Konwertuj", command=lambda: self.conversion_logic())
         self.button.grid(row=3, column=1, columnspan=3)
     
@@ -117,7 +117,7 @@ class App(customtki.CTk):
             converted_value = temperatura.convert_temperature(self.lista_in.get(), self.lista_out.get(), float(entry_value))
         
         elif self.category == "waluty":
-            converted_value = round(waluty.convert_currency(self.lista_in.get(), self.lista_out.get(), float(entry_value)), 2) # Wartość zaokrąglona do dwoch miejsc po przecinku
+            converted_value = round(waluty.convert_currency(self.lista_in.get(), self.lista_out.get(), float(entry_value)), 2) # Rounded, 2 decimal points
         
         else:
             converted_value = logika.convert(self.category, self.lista_in.get(), self.lista_out.get(), float(entry_value))

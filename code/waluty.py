@@ -2,7 +2,7 @@ import requests
 import json
 import logika
 
-# Otwieranie pliku .json z danymi jednostek
+# Open file
 with open('jednostki.json', 'r', encoding='utf-8') as file:
     dane_jednostek = json.load(file)
 
